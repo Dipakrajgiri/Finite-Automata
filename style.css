@@ -1,0 +1,218 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    color: black;
+}
+
+body {
+    background-image: linear-gradient(to bottom, rgb(0, 81, 255), rgba(255, 0, 13, 0.986));
+    background-attachment: fixed;
+}
+
+/* **************************************************************************************************************** */
+
+header {
+    width: 100%;
+    top: 0px;
+    position: fixed;
+    overflow: hidden;
+    display: flex;
+    height: 3rem;
+    justify-content: space-between;
+    background-color: rgb(4, 0, 255);
+}
+
+.name a img {
+    height: 40px;
+    width: 40px;
+    border-radius: 50%;
+    margin-top: 10px;
+    padding: 10px;
+}
+
+.name {
+    display: flex;
+    align-items: center;
+    font-size: 2rem;
+    margin: 5px;
+}
+
+header div a {
+    font-weight: bold;
+    text-decoration: none;
+}
+
+header nav ul {
+    display: flex;
+    justify-content: right;
+}
+
+header nav ul li {
+    font-size: 1rem;
+    list-style-position: inside;
+    list-style: none;
+    margin: .5rem 1rem .5rem;
+    padding: .5rem 1rem .5rem;
+    font-size: 20px;
+
+}
+
+header nav ul li:hover {
+    background-color: aqua;
+    color: rgb(221, 11, 11);
+
+
+}
+
+header nav ul li a {
+    text-decoration: none;
+    font-weight: 1000;
+}
+
+/* **************************************************************************************************************** */
+.automata img {
+    float: right;
+}
+
+main {
+    margin-top: 60px;
+}
+
+h1,
+h2,
+h3 {
+    margin: 20px;
+}
+
+h1 {
+
+    font-size: 35px;
+}
+
+h2 {
+
+    font-size: 30px;
+}
+
+h3 {
+    font-size: 25px;
+}
+
+.start {
+    font-size: 20px;
+    color: rgb(26, 2, 2);
+
+}
+
+p,
+pre {
+    margin: 20px;
+    font-size: 25px;
+    text-indent: 20px;
+}
+
+.automata ol {
+    margin: 30px;
+}
+
+.automata ol li {
+    margin: 10px 30px;
+    font-size: 25px;
+}
+
+#img1 {
+    float: right;
+    width: 300px;
+    margin: 30px;
+   
+}
+#finiteautomata ol {
+    list-style: none;
+    margin: 30px;
+}
+
+#finiteautomata ol li {
+    margin: 10px 30px;
+    font-size: 25px;
+}
+#img2
+{
+    display: block;
+    width: 500px;
+    margin: auto;  
+} 
+table{
+    border: 5px;
+    border-collapse: collapse;
+    border-color: blue;
+}
+td,th{
+    width: 100px;
+}
+#img3
+{
+    width: 700px;
+    float: right;
+    margin-right: 20%;
+}
+pre{
+    background-color: rgba(175, 15, 127, 0.342);
+    padding: 10px;
+}
+#img
+{
+    display: block;
+    margin: auto;
+    width: 30%;
+}
+.application
+{
+    margin:50px;
+    font-size:20px;
+}
+pre code{
+    font-size: 20px;
+
+}
+#imgnfa{
+    display: block;
+    margin:auto;
+}
+
+/* **************************************************************************************************************** */
+
+
+
+
+
+
+
+
+/* **************************************************************************************************************** */
+footer {
+    height: 200px;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    clear: both;
+}
+
+footer h1 {
+    color: rgb(51, 27, 27);
+    font-size: 100px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* **************************************************************************************************************** */

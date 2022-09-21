@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DFA</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <!-- --------------------------------------------------------------------------------------- -->
+    <header>
+        <div class="name">
+            <a href="index.html"> <img src="assets/dip1.jpeg" alt=""></a>
+            <div><a href="index.html">Dip AK</a></div>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="#automata">Automata</a></li>
+                <li><a href="#finiteautomata">Finite Automata</a></li>
+                <li><a href="#dfa">DFA</a></li>
+                <li><a href="#applications">Application</a></li>
+                <li><a href="#nfa">NFA</a></li>
+            </ul>
+        </nav>
+    </header>
+    <!-- --------------------------------------------------------------------------------------- -->
+    <main>
+        <div class="start">
+            <h2>Lets start with a problem!</h2>
+            <p>Let us consider L be language which contains all the stings containing at least one times 'ab' in it.
+                Check whether the string <strong>"aduhrkfjoieabjijfi"</strong> is part of the language L or not?
+            </p>
+        </div>
+        <div id="automata">
+            <h1>Intoduction to Automata</h1>
+            <div class="automata">
+                <img src="assets/Automata_theory.svg.png" alt="">
+                <p>
+                    Automata theory (also known as Theory Of Computation) is a theoretical branch of Computer Science
+                    and
+                    Mathematics, which mainly deals with the logic of computation with respect to simple machines,
+                    referred
+                    to as automata.
+                    Automata* enables scientists to understand how machines compute the functions and solve problems.
+                    The
+                    main motivation behind developing Automata Theory was to develop methods to describe and analyze the
+                    dynamic behavior of discrete systems.
+                    Automata originated from the word “Automaton” which is closely related to “Automation”.
+                </p>
+                <h3>There are four major famlies of automata:</h3>
+                <ol>
+                    <li> Finite-state machine.
+                    </li>
+                    <li>Pushdown automata.
+                    </li>
+                    <li>Linear-bounded automata.
+                    </li>
+                    <li> Turing machine.</li>
+                </ol>
+            </div>
+            <h2>Basic Terminologies of Theory of Computation:</h2>
+            <h3>1.Symbol: </h3>
+            <p>A symbol (often also called a character) is the smallest building block, which can be any alphabet,
+                letter, or picture.
+            </p>
+            <h3>2.Alphabet(Σ): </h3>
+            <p>
+                An alphabet is a finite, nonempty set of symbols.Conventionally,we use the symbol Σ for an alphabet.
+            </p>
+            <p>Example: Σ={0,1},the binary alphabet.</p>
+            <h3>3.String: </h3>
+            <p>
+                A string is a finite sequence of symbols choosen from some alphabet.
+            </p>
+            <p>
+                Example: 0101011 is a strinig from the binary alphabet Σ={0,1}.
+            </p>
+
+            <h3>4.Language: </h3>
+            <p>
+                A language is a set of strings, chosen from some Σ* or we can say- ‘A language is a subset of Σ* ‘. A
+                language that can be formed over ‘ Σ ‘ can be Finite or Infinite.
+            </p>
+            <pre>
+                Example of Finite Language:
+                L1 = { set of string of 2 }
+                L1 = { xy, yx, xx, yy }
+
+                Example of Infinite Language:
+                L1 = { set of all strings starts with 'b' }
+                L1 = { babb, baa, ba, bbb, baab, ....... }
+            </pre>
+
+
+        </div>
+        <div id="finiteautomata">
+            <h1>Intoduction to Finite Automata</h1>
+            <img src="assets/download.png" alt="" id="img1">
+            <p>
+                Finite Automata(FA) is the simplest machine to recognize patterns. The finite automata or finite state
+                machine is an abstract machine that has five elements or tuples. It has a set of states and rules for
+                moving from one state to another but it depends upon the applied input symbol. Basically, it is an
+                abstract model of a digital computer. The following figure shows some essential features of general
+                automation.
+            </p>
+            <h3>Finite automata consist of five tuples,</h3>
+            <ol>
+                <li>Q : Finite set of states.
+
+                </li>
+                <li>
+                    Σ : set of Input Symbols.
+                </li>
+                <li> q : Initial state.
+                </li>
+                <li> F : set of Final States.
+                </li>
+                <li>δ : Transition Function.</li>
+
+            </ol>
+            <img src="assets/dfa1.png" alt="" id="img2">
+            <h3>In above automata,</h3>
+            <ol>
+                <img src="assets/transition.png" alt="" id="img3">
+                <li>Q : q<sub>0</sub>,q<sub>1</sub>,q<sub>2</sub>
+
+                </li>
+                <li>
+                    Σ : {0,1}
+                </li>
+                <li> q : q<sub>0</sub>
+                </li>
+                <li> F : q<sub>2</sub>
+                </li>
+                <li>δ :
+                </li>
+
+            </ol>
+        </div>
+        <div id="dfa">
+            <h1>Deterministic finite automata</h1>
+
+            <p>DFA refers to deterministic finite automata. Deterministic refers to the uniqueness of the computation.
+                The finite automata are deterministic FA, if the machine reads an input string one symbol at a time.
+                In DFA, there is only one path input from the current state to the next state. It does not accept the
+                null move, i.e. it cannot change state without any input. It can contain multiple final states. It is
+                used in Lexical Analysis in compilers.
+            </p>
+            <pre>
+                DFA consists of 5 tuples {Q, Σ, q, F, δ}. 
+Q : set of all states.
+Σ : set of input symbols. ( Symbols which machine takes as input )
+q : Initial state. ( Starting state of a machine )
+F : set of final state.
+δ : Transition Function, defined as δ : Q X Σ --> Q.
+            </pre>
+            <h3>Note:</h3>
+            <p>
+                It is the simplest model of computation.
+            </p>
+            <p>
+                It has very limited memory.
+            </p>
+            <img src="assets/dfa.jpg" alt="" id="img">
+        </div>
+        <div id="applications">
+            <h1>Applications</h1>
+            <ol class="application">
+                <li>Software for designing and checking the behavior of digital circuits.</li>
+                <li>The "lexical analyzer" of a typical compiler, that is, the compiler component thet breaks the input
+                    text into logical units, such as identifiers,keywords,and punctuation.</li>
+                <li>Software for scanning large bodies of text, such as collections of web pages to find occurances of
+                    words,phrases, or other patterns.</li>
+                <li>Software for verifying systens of all types that have a finite number of distinct states,such as
+                    communications protocols for secure exchange of information.</li>
+            </ol>
+            <h3>Wap to write all the strings starting with 'a' entered by the user in file? </h3>
+            <p>
+
+            </p>
+            <pre>
+                <code>
+                    while (1)
+                    {
+                        cout << "Enter an sting to add to dictionary\n"
+                 << "Enter the to stop adding in dictionary\n";
+                        cin >> str;
+                
+                        if ((str[0] == 'X' && str[1] == '\0') || (str[0] == 'x' && str[1] == '\0'))
+                        {
+                break;
+                        }
+                        if ((str[0] == 'a' || str[0] == 'A'))
+                        {
+                fout << str << "\n";
+                        }
+                        else
+                        {
+                continue;
+                        }
+                    }
+                </code>
+            </pre>
+
+
+
+
+
+
+
+        </div>
+        <div id="nfa">
+            <h1>Non-deterministic finite automata</h1>
+
+            <h3>NFA is similar to DFA except following additional features:</h3>
+
+            <p>Null (or ε) move is allowed i.e., it can move forward without reading symbols. Ability to transmit to
+                any number of states for a particular input.
+            </p>
+            <p>
+                However, these above features don’t add any power to NFA. If we compare both in terms of power, both are
+                equivalent.
+            </p>
+
+            <p>
+                Due to the above additional features, NFA has a different transition function, the rest is the same as
+                DFA.
+            </p>
+
+            <p>δ: Transition Function</p>
+            <p>δ: Q X (Σ U ε ) --> 2 ^ Q.</p>
+            <p>
+                As you can see in the transition function is for any input including null (or ε), NFA can go to any
+                state number of states. For example, below is an NFA for the above problem.
+            </p>
+
+            <img src="assets/nfa.jpg" alt="" id="imgnfa">
+            <p>
+                One important thing to note is, in NFA, if any path for an input string leads to a final state, then the
+                input string is accepted. For example, in the above NFA, there are multiple paths for the input string
+                “00”. Since one of the paths leads to a final state, “00” is accepted by the above NFA.
+
+            </p>
+            <pre>
+                Some Important Points: 
+
+Justification:
+Since all the tuples in DFA and NFA are the same except for one of the tuples,
+ which is Transition Function (δ) 
+In case of DFA
+δ : Q X Σ --> Q
+In case of NFA
+δ : Q X Σ --> 2Q
+Now if you observe you’ll find out Q X Σ –> Q is part of Q X Σ –> 2Q.
+
+On the RHS side, Q is the subset of 2Q which indicates Q is contained in 2Q or Q is a part
+ of 2Q, however, the reverse isn’t true.
+ So mathematically, we can conclude that every DFA is NFA but not vice-versa. 
+ Yet there is a way to convert an NFA to DFA,
+  so there exists an equivalent DFA for every NFA. 
+ 
+
+Both NFA and DFA have the same power and each NFA can be translated into a DFA. 
+1.There can be multiple final states in both DFA and NFA. 
+2.NFA is more of a theoretical concept. 
+3.DFA is used in Lexical Analysis in Compiler. 
+4.If the number of states in the NFA is N then, its DFA can have maximum 2N number of states.
+            </pre>
+
+
+
+
+        </div>
+    </main>
+    <!-- --------------------------------------------------------------------------------------- -->
+    <footer>
+        <h1>Thank you all!</h1>
+    </footer>
+    <!-- --------------------------------------------------------------------------------------- -->
+
+</body>
+
+</html>
